@@ -35,7 +35,7 @@ public class AccesoController {
 	public String agregar(@RequestParam("username") String usuario,@RequestParam("password") String clave, Model modelo)
 	{
 	
-	   		return "redirect:inicio/menu";
+	   		return "redirect:/inicio/menu";
 	}
 	
 	@GetMapping("/inicio/menu")
