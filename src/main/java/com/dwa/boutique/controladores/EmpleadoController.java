@@ -27,7 +27,7 @@ public class EmpleadoController {
 	@Autowired
 	ServicioAcceso servicioAcceso;
 	
-	@GetMapping("empleado/GestionEmpleado")
+	@GetMapping("/empleado/GestionEmpleado")
 	public String listar(Model modelo ,HttpSession sesion) {
 		
 		int iduser = Integer.parseInt(sesion.getAttribute("iduser").toString());
@@ -62,7 +62,7 @@ public class EmpleadoController {
 			return "redirect:/empleado/GestionEmpleado";
 		}
 		modelo.addAttribute("error", servicioEmpleado.getMensaje());
-		return "/empleado/GestionEmpleado";
+		return "empleado/GestionEmpleado";
 	}
 	
 	
@@ -86,6 +86,6 @@ public class EmpleadoController {
 	public String eliminar(@PathVariable int id,Model modelo) 
 	{
 		servicioEmpleado.EliminarEmpleado(id);
-		return "redirect:/empleado/GestionEmpleado";
+		return "redirect:empleado/GestionEmpleado";
 	}
 }
