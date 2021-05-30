@@ -44,7 +44,7 @@ public class AccesoController {
 		int iduser = Integer.parseInt(sesion.getAttribute("iduser").toString());
 		Empleado emp = servicioAcceso.buscar(iduser);
 		modelo.addAttribute("emp",emp);
-		return "/inicio/menu";
+		return "inicio/menu";
 	}
 	
 	/*
