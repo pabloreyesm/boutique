@@ -27,7 +27,7 @@ public class EmpleadoController {
 	@Autowired
 	ServicioAcceso servicioAcceso;
 	
-	@GetMapping("/empleado/GestionEmpleado")
+	@GetMapping("empleado/GestionEmpleado")
 	public String listar(Model modelo ,HttpSession sesion) {
 		
 		int iduser = Integer.parseInt(sesion.getAttribute("iduser").toString());
