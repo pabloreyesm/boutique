@@ -50,7 +50,7 @@ public class ProductoController {
 		{
 			modelo.addAttribute("error",servicioProducto.getMensaje());
 		}
-		return "producto/GestionProducto";
+		return "/producto/GestionProducto";
 	}
 	
 	
