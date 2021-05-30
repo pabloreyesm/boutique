@@ -59,7 +59,7 @@ public class EmpleadoController {
 		boolean res = servicioEmpleado.agregarEmpleado(empleado, clave);
 		if(res) 
 		{
-			return "redirect:/empleado/GestionEmpleado";
+			return "redirect:empleado/GestionEmpleado";
 		}
 		modelo.addAttribute("error", servicioEmpleado.getMensaje());
 		return "empleado/GestionEmpleado";
