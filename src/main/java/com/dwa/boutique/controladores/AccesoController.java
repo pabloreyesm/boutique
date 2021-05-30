@@ -28,14 +28,14 @@ public class AccesoController {
 	@GetMapping(path = {"/acceso/acceder", "/"})
 	public String validar() 
 	{
-		return "/acceso/acceder";
+		return "acceso/acceder";
 	}
 	
 	@PostMapping("/acceso/acceder")
 	public String agregar(@RequestParam("username") String usuario,@RequestParam("password") String clave, Model modelo)
 	{
 	
-	   		return "/redirect:/inicio/menu";
+	   		return "redirect:inicio/menu";
 	}
 	
 	@GetMapping("/inicio/menu")
@@ -44,7 +44,7 @@ public class AccesoController {
 		int iduser = Integer.parseInt(sesion.getAttribute("iduser").toString());
 		Empleado emp = servicioAcceso.buscar(iduser);
 		modelo.addAttribute("emp",emp);
-		return "/inicio/menu";
+		return "inicio/menu";
 	}
 	
 	/*
