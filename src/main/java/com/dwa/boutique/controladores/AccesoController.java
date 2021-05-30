@@ -28,7 +28,7 @@ public class AccesoController {
 	@GetMapping(path = {"/acceso/acceder", "/"})
 	public String validar() 
 	{
-		return "acceso/acceder";
+		return "/acceso/acceder";
 	}
 	
 	@PostMapping("/acceso/acceder")
