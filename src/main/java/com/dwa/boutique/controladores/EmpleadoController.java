@@ -86,6 +86,6 @@ public class EmpleadoController {
 	public String eliminar(@PathVariable int id,Model modelo) 
 	{
 		servicioEmpleado.EliminarEmpleado(id);
-		return "redirect:empleado/GestionEmpleado";
+		return "redirect:/empleado/GestionEmpleado";
 	}
 }
